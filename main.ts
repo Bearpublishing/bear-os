@@ -1,18 +1,21 @@
 input.onButtonPressed(Button.A, function () {
     if (mode == "Start") {
-        Cruser.change(LedSpriteProperty.X, 1)
+        Cruser.change(LedSpriteProperty.X, -1)
     }
 })
 input.onButtonPressed(Button.AB, function () {
     if (mode == "Start") {
-        if (Cruser == 0) {
-        	
-        }
+        Cruser.change(LedSpriteProperty.Y, 2)
     }
 })
 input.onButtonPressed(Button.B, function () {
     if (mode == "Start") {
-        Cruser.change(LedSpriteProperty.X, -1)
+        Cruser.change(LedSpriteProperty.X, 1)
+    }
+})
+input.onGesture(Gesture.ThreeG, function () {
+    if (mode == "Start") {
+        Cruser.change(LedSpriteProperty.Y, -2)
     }
 })
 let Cruser: game.LedSprite = null
@@ -30,3 +33,5 @@ let App_4 = game.createSprite(1, 2)
 let App_3 = game.createSprite(2, 2)
 let App_2 = game.createSprite(3, 2)
 let App_1 = game.createSprite(4, 2)
+let Crusor_pos = Cruser.get(LedSpriteProperty.X)
+let crusor_pos_y = Cruser.get(LedSpriteProperty.Y)
