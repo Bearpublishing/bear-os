@@ -31,7 +31,30 @@ let crusor_pos_y = 0
 let Crusor_pos = 0
 let Cruser: game.LedSprite = null
 let mode = ""
-basic.showString("Welcome to Bear OS!")
+for (let index = 0; index < 6; index++) {
+    basic.showLeds(`
+        . . # . .
+        . . # . .
+        # # # # #
+        . . # . .
+        . . # . .
+        `)
+    basic.pause(100)
+    basic.showLeds(`
+        # . . . #
+        . # . # .
+        . . # . .
+        . # . # .
+        # . . . #
+        `)
+}
+basic.showLeds(`
+    # . # . #
+    . # . # .
+    # . # . #
+    . # . # .
+    # . # . #
+    `)
 mode = "Start"
 Cruser = game.createSprite(0, 1)
 let App_10 = game.createSprite(0, 0)
